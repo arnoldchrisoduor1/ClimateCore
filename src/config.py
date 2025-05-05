@@ -11,4 +11,6 @@ WEATHER_API_BASE_URL = "https://api.openweathermap.org/data/2.5"
 CITIES = ["London", "New York", "Tokyo", "Sydney", "Rio de Janeiro"]
 COLLECTION_INTERVAL_HOURS = 1
 
-RAW_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data", "raw")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+RAW_DATA_DIR = os.path.join(BASE_DIR, "data", "raw")
