@@ -1,0 +1,20 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# installing dependacies.
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the source code
+COPY src/ ./src/
+COPY .env .
+
+# creating the necessary directories
+RUN mkdir -p data/raw logs
+
+# Set Python path
+ENV PYTHONPATH="/app:${PYTHONPATH}"
+
+# Run the scheduler
+CMD ["python", "src/scheduler.py"]

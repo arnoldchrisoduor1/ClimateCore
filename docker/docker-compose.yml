@@ -1,0 +1,11 @@
+services:
+  weather-collector:
+    build:
+      context: ..
+      dockerfile: dockerfile/Dockerfile
+    volumes:
+      - ../data:/app/data
+      - ../logs:/app/logs
+    environment:
+    - PYTHONUNBUFFERED=1
+    restart: unless-stopped
