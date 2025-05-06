@@ -1,0 +1,11 @@
+2025-05-06 22:14:42.837 | INFO     | __main__:collect_and_save:46 - Collecting weather data for London
+2025-05-06 22:14:43.942 | INFO     | __main__:collect_and_save:61 - Saved data for London to C:\Users\arnol\Desktop\ClimateCore\data\raw\london_20250506_221442.json
+2025-05-06 22:14:43.943 | INFO     | __main__:collect_and_save:46 - Collecting weather data for New York
+2025-05-06 22:14:45.134 | INFO     | __main__:collect_and_save:61 - Saved data for New York to C:\Users\arnol\Desktop\ClimateCore\data\raw\new_york_20250506_221442.json
+2025-05-06 22:14:45.137 | INFO     | __main__:collect_and_save:46 - Collecting weather data for Tokyo
+2025-05-06 22:14:46.187 | INFO     | __main__:collect_and_save:61 - Saved data for Tokyo to C:\Users\arnol\Desktop\ClimateCore\data\raw\tokyo_20250506_221442.json
+2025-05-06 22:14:46.190 | INFO     | __main__:collect_and_save:46 - Collecting weather data for Sydney
+2025-05-06 22:14:47.190 | INFO     | __main__:collect_and_save:61 - Saved data for Sydney to C:\Users\arnol\Desktop\ClimateCore\data\raw\sydney_20250506_221442.json
+2025-05-06 22:14:47.193 | INFO     | __main__:collect_and_save:46 - Collecting weather data for Rio de Janeiro
+2025-05-06 22:14:48.155 | INFO     | __main__:collect_and_save:61 - Saved data for Rio de Janeiro to C:\Users\arnol\Desktop\ClimateCore\data\raw\rio_de_janeiro_20250506_221442.json
+2025-05-06 22:14:48.164 | INFO     | __main__:collect_and_save:70 - Saved combined data to C:\Users\arnol\Desktop\ClimateCore\data\raw\weather_data_20250506_221442.json

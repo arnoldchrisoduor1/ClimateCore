@@ -9,3 +9,16 @@ services:
     environment:
     - PYTHONUNBUFFERED=1
     restart: unless-stopped
+    command: ["python", "src/scheduler.py"]
+
+  weather-processor:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ../data:/app/data
+      - ../logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    command: ["python", "src/process_scheduler.py"]

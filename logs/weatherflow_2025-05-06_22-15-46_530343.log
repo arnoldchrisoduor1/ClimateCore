@@ -1,0 +1,2 @@
+2025-05-06 22:15:47.493 | INFO     | __main__:process_recent_data:73 - Found 6 recent files to process
+2025-05-06 22:15:47.578 | INFO     | __main__:process_recent_data:95 - Saved processed data to C:\Users\arnol\Desktop\ClimateCore\data\processed\processed_weather_20250506_221547.csv

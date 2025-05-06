@@ -1,0 +1,6 @@
+2025-05-06 22:21:37.324 | INFO     | __main__:process_recent_data:74 - Found 6 recent files to process
+2025-05-06 22:21:37.360 | INFO     | __main__:process_recent_data:96 - Saved processed data to C:\Users\arnol\Desktop\ClimateCore\data\processed\processed_weather_20250506_222137.csv
+2025-05-06 22:21:37.383 | INFO     | __main__:generate_daily_stats:146 - Saved daily analytics to C:\Users\arnol\Desktop\ClimateCore\data\analytics\daily_weather_stats_20250506.csv
+2025-05-06 22:21:37.407 | INFO     | src.processors.data_analyzer:analyze_temperature_trends:95 - Saved temperature trend analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\temperature_trends_20250506.csv
+2025-05-06 22:21:37.427 | INFO     | src.processors.data_analyzer:analyze_weather_patterns:129 - Saved weather pattern analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\weather_patterns_20250506.csv
+2025-05-06 22:21:37.434 | INFO     | __main__:run_analysis:161 - Completed weather data analysis
