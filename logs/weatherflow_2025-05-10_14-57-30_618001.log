@@ -1,0 +1,14 @@
+2025-05-10 14:57:30.622 | INFO     | __main__:job:10 - Running scheduled data collection at 2025-05-10T14:57:30.622092
+2025-05-10 14:57:30.622 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for London
+2025-05-10 14:57:31.705 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for London to C:\Users\arnol\Desktop\ClimateCore\data\raw\london_20250510_145730.json
+2025-05-10 14:57:31.711 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for New York
+2025-05-10 14:57:32.738 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for New York to C:\Users\arnol\Desktop\ClimateCore\data\raw\new_york_20250510_145730.json
+2025-05-10 14:57:32.738 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Tokyo
+2025-05-10 14:57:33.748 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Tokyo to C:\Users\arnol\Desktop\ClimateCore\data\raw\tokyo_20250510_145730.json
+2025-05-10 14:57:33.748 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Sydney
+2025-05-10 14:57:34.768 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Sydney to C:\Users\arnol\Desktop\ClimateCore\data\raw\sydney_20250510_145730.json
+2025-05-10 14:57:34.768 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Rio de Janeiro
+2025-05-10 14:57:35.808 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Rio de Janeiro to C:\Users\arnol\Desktop\ClimateCore\data\raw\rio_de_janeiro_20250510_145730.json
+2025-05-10 14:57:35.818 | INFO     | src.collectors.weather_collector:collect_and_save:70 - Saved combined data to C:\Users\arnol\Desktop\ClimateCore\data\raw\weather_data_20250510_145730.json
+2025-05-10 14:57:35.823 | INFO     | __main__:job:13 - Scheduled collection completed successfully
+2025-05-10 14:57:35.823 | INFO     | __main__:main:24 - weather data collector scheduler started

@@ -1,0 +1,4 @@
+2025-05-10 13:42:43.161 | INFO     | src.database.connection:init_db:40 - Database tables created successfully
+2025-05-10 13:42:43.225 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for TestCity
+2025-05-10 13:42:43.253 | INFO     | src.database.operations:create_data_version:50 - Created new data version: b8c992e1-c15c-40ba-8233-783472baf5e7 - test_version
+2025-05-10 13:42:43.293 | INFO     | src.database.operations:store_weather_data:118 - Inserted 1 weather records

@@ -1,0 +1,8 @@
+2025-05-10 15:39:09.367 | INFO     | __main__:test_connection:16 - Testing connection to database: postgresql://weatherflow:weatherflow@localhost:5432/weatherflow
+2025-05-10 15:39:09.767 | INFO     | src.database.connection:init_db:40 - Database tables created successfully
+2025-05-10 15:39:09.767 | INFO     | __main__:test_connection:21 - Database tables created successfully
+2025-05-10 15:39:09.832 | INFO     | src.database.operations:create_data_version:50 - Created new data version: ad9334e4-d2f2-46bf-af08-59322bc9cbd7 - test_version
+2025-05-10 15:39:09.832 | INFO     | __main__:test_connection:32 - Created data version with ID: ad9334e4-d2f2-46bf-af08-59322bc9cbd7
+2025-05-10 15:39:09.857 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for Test City
+2025-05-10 15:39:09.864 | INFO     | __main__:test_connection:43 - Created city with ID: 1
+2025-05-10 15:39:09.871 | INFO     | __main__:test_connection:47 - Database connection test completed successfully

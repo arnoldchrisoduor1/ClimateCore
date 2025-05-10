@@ -1,0 +1,19 @@
+2025-05-10 15:29:20.027 | INFO     | __main__:store_data:57 - Starting storage job...
+2025-05-10 15:29:20.100 | INFO     | src.database.operations:create_data_version:50 - Created new data version: c73c4c2b-4a96-4383-8372-fa330a03d1a4 - auto_20250510_1529
+2025-05-10 15:29:20.172 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 15:29:20.177 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 15:29:20.181 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 15:29:20.184 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 15:29:20.190 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 15:29:20.194 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 15:29:20.198 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 15:29:20.201 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 15:29:20.201 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 15:29:20.209 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 15:29:20.209 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 15:29:20.213 | INFO     | __main__:store_data:84 - Stored 0 records from processed_weather_20250510_150547.csv
+2025-05-10 15:29:20.303 | ERROR    | __main__:store_data:99 - Storage job failed: (sqlite3.IntegrityError) UNIQUE constraint failed: daily_weather_stats.city_id, daily_weather_stats.date
+[SQL: INSERT INTO daily_weather_stats (city_id, date, temperature_min, temperature_max, temperature_avg, humidity_min, humidity_max, humidity_avg, pressure_min, pressure_max, pressure_avg, wind_speed_min, wind_speed_max, wind_speed_avg, temperature_variation, version_id, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id]
+[parameters: (2, '2025-05-10 00:00:00.000000', 21.02, 21.02, 21.02, 34, 34, 34.0, 1017, 1017, 1017.0, 5.36, 5.36, 5.36, 0.0, 'c73c4c2b-4a96-4383-8372-fa330a03d1a4', '2025-05-10 12:29:20.301047')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-10 15:29:20.303 | INFO     | __main__:main:132 - Storage scheduler started. Runs hourly...

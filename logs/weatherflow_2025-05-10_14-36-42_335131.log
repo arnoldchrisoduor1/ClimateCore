@@ -1,0 +1,20 @@
+2025-05-10 14:36:42.520 | INFO     | __main__:<module>:11 - Starting database manager test...............
+2025-05-10 14:36:43.270 | INFO     | test_database_manager:<module>:11 - Starting database manager test...............
+2025-05-10 14:36:43.280 | INFO     | test_database_manager:temp_db:17 - creating temporary database
+2025-05-10 14:36:43.287 | INFO     | src.database.connection:init_db:40 - Database tables created successfully
+2025-05-10 14:36:43.289 | INFO     | test_database_manager:test_empty_database_operations:120 - testing empty database operations with manager.........
+2025-05-10 14:36:43.385 | INFO     | src.database.manager:backup_database:85 - SQLite database backup created at C:\Users\arnol\Desktop\ClimateCore\src\data/backups\weatherflow_backup_20250510_143643.db
+2025-05-10 14:36:43.405 | INFO     | src.database.manager:optimize_database:128 - SQLite database vacuumed successfully
+2025-05-10 14:36:43.411 | INFO     | src.database.manager:clean_old_versions:156 - Deactivated 0 old data versions
+2025-05-10 14:36:43.415 | INFO     | src.database.manager:prune_old_data:175 - Removed 0 old weather records older than 90 days
+2025-05-10 14:36:43.445 | INFO     | src.database.manager:rebuild_indexes:282 - SQLite indexes rebuilt successfully
+2025-05-10 14:36:43.455 | INFO     | test_database_manager:temp_db:17 - creating temporary database
+2025-05-10 14:36:43.465 | INFO     | src.database.connection:init_db:40 - Database tables created successfully
+2025-05-10 14:36:43.468 | INFO     | test_database_manager:test_populated_database_operations:157 - Testing all manager operations with populated data.......
+2025-05-10 14:36:43.471 | INFO     | test_database_manager:populate_test_data:38 - Populating test data........
+2025-05-10 14:36:43.573 | INFO     | src.database.manager:backup_database:85 - SQLite database backup created at C:\Users\arnol\Desktop\ClimateCore\src\data/backups\weatherflow_backup_20250510_143643.db
+2025-05-10 14:36:43.594 | INFO     | src.database.manager:clean_old_versions:156 - Deactivated 1 old data versions
+2025-05-10 14:36:43.620 | INFO     | src.database.manager:prune_old_data:175 - Removed 1 old weather records older than 30 days
+2025-05-10 14:36:43.665 | INFO     | src.database.manager:optimize_database:128 - SQLite database vacuumed successfully
+2025-05-10 14:36:43.690 | INFO     | src.database.manager:rebuild_indexes:282 - SQLite indexes rebuilt successfully
+2025-05-10 14:36:43.697 | INFO     | test_database_manager:test_maintenance_scheduling:191 - Test scheduler initialization (mock version).........

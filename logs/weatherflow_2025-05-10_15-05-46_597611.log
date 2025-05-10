@@ -1,0 +1,24 @@
+2025-05-10 15:05:47.307 | INFO     | __main__:job:9 - Running scheduled data processing at 2025-05-10T15:05:47.307760
+2025-05-10 15:05:47.310 | INFO     | src.versioning.data_versioner:_initialize_registry:41 - Initialized empty version registry
+2025-05-10 15:05:47.310 | INFO     | src.processors.weather_processor:process_recent_data:80 - Found 6 recent files to process
+2025-05-10 15:05:47.377 | INFO     | src.processors.weather_processor:process_recent_data:102 - Saved processed data to C:\Users\arnol\Desktop\ClimateCore\data\processed\processed_weather_20250510_150547.csv
+2025-05-10 15:05:47.405 | ERROR    | src.processors.weather_processor:_store_in_database:162 - Error storing data in database: (sqlite3.OperationalError) no such table: data_versions
+[SQL: SELECT data_versions.id AS data_versions_id, data_versions.version_name AS data_versions_version_name, data_versions.description AS data_versions_description, data_versions.parent_version_id AS data_versions_parent_version_id, data_versions.created_at AS data_versions_created_at, data_versions.created_by AS data_versions_created_by, data_versions.is_active AS data_versions_is_active, data_versions.metadata_json AS data_versions_metadata_json 
+FROM data_versions 
+WHERE data_versions.is_active = ? ORDER BY data_versions.created_at DESC
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-10 15:05:47.439 | INFO     | src.processors.weather_processor:generate_daily_stats:209 - Saved daily analytics to C:\Users\arnol\Desktop\ClimateCore\data\analytics\daily_weather_stats_20250510.csv
+2025-05-10 15:05:47.450 | ERROR    | src.processors.weather_processor:generate_daily_stats:230 - Error storing daily stats in database: (sqlite3.OperationalError) no such table: data_versions
+[SQL: SELECT data_versions.id AS data_versions_id, data_versions.version_name AS data_versions_version_name, data_versions.description AS data_versions_description, data_versions.parent_version_id AS data_versions_parent_version_id, data_versions.created_at AS data_versions_created_at, data_versions.created_by AS data_versions_created_by, data_versions.is_active AS data_versions_is_active, data_versions.metadata_json AS data_versions_metadata_json 
+FROM data_versions 
+WHERE data_versions.is_active = ? ORDER BY data_versions.created_at DESC
+ LIMIT ? OFFSET ?]
+[parameters: (1, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-10 15:05:47.483 | INFO     | src.processors.data_analyzer:analyze_temperature_trends:95 - Saved temperature trend analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\temperature_trends_20250510.csv
+2025-05-10 15:05:47.526 | INFO     | src.processors.data_analyzer:analyze_weather_patterns:129 - Saved weather pattern analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\weather_patterns_20250510.csv
+2025-05-10 15:05:47.527 | INFO     | src.processors.weather_processor:run_analysis:246 - Completed weather data analysis
+2025-05-10 15:05:47.535 | INFO     | __main__:job:12 - Scheduled processing completed successfuly
+2025-05-10 15:05:47.536 | INFO     | __main__:main:23 - Weather data processor scheduler started

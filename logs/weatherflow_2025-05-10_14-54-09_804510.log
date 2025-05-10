@@ -1,0 +1,16 @@
+2025-05-10 14:54:10.011 | INFO     | __main__:store_data:57 - Starting storage job...
+2025-05-10 14:54:10.085 | INFO     | src.database.operations:create_data_version:50 - Created new data version: 7a71d5ef-5e45-4b58-a6f6-320825cf2ce1 - auto_20250510_1454
+2025-05-10 14:54:10.260 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for London
+2025-05-10 14:54:10.352 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for New York
+2025-05-10 14:54:10.401 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for Rio de Janeiro
+2025-05-10 14:54:10.461 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for Sydney
+2025-05-10 14:54:10.507 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for Tokyo
+2025-05-10 14:54:10.517 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-06 22:10:11 already exists
+2025-05-10 14:54:10.525 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-06 22:04:33 already exists
+2025-05-10 14:54:10.542 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-06 22:06:05 already exists
+2025-05-10 14:54:10.552 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-06 22:14:47 already exists
+2025-05-10 14:54:10.577 | INFO     | src.database.operations:store_weather_data:118 - Inserted 6 weather records
+2025-05-10 14:54:10.579 | INFO     | __main__:store_data:84 - Stored 6 records from processed_weather_20250506_222137.csv
+2025-05-10 14:54:10.908 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 5 daily stats records
+2025-05-10 14:54:10.909 | INFO     | __main__:store_data:95 - Storage job complete. Total records: 6
+2025-05-10 14:54:10.910 | INFO     | __main__:main:132 - Storage scheduler started. Runs hourly...

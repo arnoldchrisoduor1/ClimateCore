@@ -1,0 +1,6 @@
+2025-05-10 15:08:57.482 | INFO     | __main__:store_data:57 - Starting storage job...
+2025-05-10 15:08:57.506 | ERROR    | __main__:store_data:99 - Storage job failed: (sqlite3.OperationalError) no such table: data_versions
+[SQL: INSERT INTO data_versions (id, version_name, description, parent_version_id, created_at, created_by, is_active, metadata_json) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('b64f7c75-5547-4fa0-b496-aba6207bbfe0', 'auto_20250510_1508', 'Automatically created version', None, '2025-05-10 12:08:57.486037', 'system', 1, None)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-10 15:08:57.508 | INFO     | __main__:main:132 - Storage scheduler started. Runs hourly...

@@ -1,24 +1,23 @@
-services:
-  weather-collector:
-    build:
-      context: ..
-      dockerfile: dockerfile/Dockerfile
-    volumes:
-      - ../data:/app/data
-      - ../logs:/app/logs
-    environment:
-    - PYTHONUNBUFFERED=1
-    restart: unless-stopped
-    command: ["python", "src/scheduler.py"]
+version: '3'
 
-  weather-processor:
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
-    volumes:
-      - ../data:/app/data
-      - ../logs:/app/logs
+services:
+  postgres:
+    image: postgres:14
+    container_name: weatherflow-postgres
     environment:
-      - PYTHONUNBUFFERED=1
+      - POSTGRES_USER=weatherflow
+      - POSTGRES_PASSWORD=weatherflow
+      - POSTGRES_DB=weatherflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
-    command: ["python", "src/process_scheduler.py"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U weatherflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

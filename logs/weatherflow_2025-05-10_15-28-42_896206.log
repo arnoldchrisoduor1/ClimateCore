@@ -1,0 +1,32 @@
+2025-05-10 15:28:43.817 | INFO     | __main__:job:9 - Running scheduled data processing at 2025-05-10T15:28:43.817491
+2025-05-10 15:28:43.830 | INFO     | src.processors.weather_processor:process_recent_data:80 - Found 12 recent files to process
+2025-05-10 15:28:43.957 | INFO     | src.processors.weather_processor:process_recent_data:102 - Saved processed data to C:\Users\arnol\Desktop\ClimateCore\data\processed\processed_weather_20250510_152843.csv
+2025-05-10 15:28:44.016 | INFO     | src.database.operations:create_data_version:50 - Created new data version: be91b924-56e9-4660-8433-03fce1ef15c9 - weather_data_20250510_152843
+2025-05-10 15:28:44.024 | INFO     | src.versioning.data_versioner:create_version:94 - Created new data version: 12e426fc-3dba-4528-8aa1-e73b9399df44 - weather_data_20250510_152843
+2025-05-10 15:28:44.047 | INFO     | src.database.operations:create_data_version:50 - Created new data version: 06522795-2e7b-48b5-96dd-0f3346127b20 - weather_data_20250510_152843
+2025-05-10 15:28:44.048 | ERROR    | src.versioning.data_versioner:add_data_to_version:118 - Version not found: be91b924-56e9-4660-8433-03fce1ef15c9
+2025-05-10 15:28:44.051 | INFO     | src.processors.weather_processor:_store_in_database:148 - Created new data version: be91b924-56e9-4660-8433-03fce1ef15c9
+2025-05-10 15:28:44.097 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for London
+2025-05-10 15:28:44.143 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for New York
+2025-05-10 15:28:44.188 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for Rio de Janeiro
+2025-05-10 15:28:44.227 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for Sydney
+2025-05-10 15:28:44.275 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for Tokyo
+2025-05-10 15:28:44.289 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 15:28:44.293 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 15:28:44.301 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 15:28:44.305 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 15:28:44.310 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 15:28:44.320 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 15:28:44.332 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 15:28:44.339 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 15:28:44.357 | INFO     | src.database.operations:store_weather_data:118 - Inserted 12 weather records
+2025-05-10 15:28:44.359 | INFO     | src.processors.weather_processor:_store_in_database:157 - Stored 12 weather records in database with version be91b924-56e9-4660-8433-03fce1ef15c9
+2025-05-10 15:28:44.430 | INFO     | src.processors.weather_processor:generate_daily_stats:209 - Saved daily analytics to C:\Users\arnol\Desktop\ClimateCore\data\analytics\daily_weather_stats_20250510.csv
+2025-05-10 15:28:44.517 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 5 daily stats records
+2025-05-10 15:28:44.527 | INFO     | src.processors.weather_processor:generate_daily_stats:223 - Stored daily stats in database with version 06522795-2e7b-48b5-96dd-0f3346127b20
+2025-05-10 15:28:44.539 | ERROR    | src.versioning.data_versioner:add_data_to_version:118 - Version not found: 06522795-2e7b-48b5-96dd-0f3346127b20
+2025-05-10 15:28:44.578 | INFO     | src.processors.data_analyzer:analyze_temperature_trends:95 - Saved temperature trend analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\temperature_trends_20250510.csv
+2025-05-10 15:28:44.630 | INFO     | src.processors.data_analyzer:analyze_weather_patterns:129 - Saved weather pattern analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\weather_patterns_20250510.csv
+2025-05-10 15:28:44.637 | INFO     | src.processors.weather_processor:run_analysis:246 - Completed weather data analysis
+2025-05-10 15:28:44.637 | INFO     | __main__:job:12 - Scheduled processing completed successfuly
+2025-05-10 15:28:44.642 | INFO     | __main__:main:23 - Weather data processor scheduler started

@@ -1,0 +1,8 @@
+2025-05-10 15:27:19.518 | INFO     | __main__:test_connection:16 - Testing connection to database: sqlite:///C:\Users\arnol\Desktop\ClimateCore\data/db/weatherflow.db
+2025-05-10 15:27:20.164 | INFO     | src.database.connection:init_db:40 - Database tables created successfully
+2025-05-10 15:27:20.165 | INFO     | __main__:test_connection:21 - Database tables created successfully
+2025-05-10 15:27:20.241 | INFO     | src.database.operations:create_data_version:50 - Created new data version: af370927-c66a-48aa-9dd9-e6d8e20c8d04 - test_version
+2025-05-10 15:27:20.244 | INFO     | __main__:test_connection:32 - Created data version with ID: af370927-c66a-48aa-9dd9-e6d8e20c8d04
+2025-05-10 15:27:20.276 | INFO     | src.database.operations:get_or_create_city:31 - Created new city record for Test City
+2025-05-10 15:27:20.287 | INFO     | __main__:test_connection:43 - Created city with ID: 1
+2025-05-10 15:27:20.292 | INFO     | __main__:test_connection:47 - Database connection test completed successfully

@@ -2,8 +2,8 @@ import time
 import schedule
 from datetime import datetime
 
-from collectors.weather_collector import run_collector
-from utils.logger import logger
+from src.collectors.weather_collector import run_collector
+from src.utils.logger import logger
 
 # Schedule data collection.
 def job():

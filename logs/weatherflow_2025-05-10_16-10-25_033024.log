@@ -1,0 +1,700 @@
+2025-05-10 16:10:25.856 | INFO     | __main__:start:144 - Starting Combined Weather System Scheduler
+2025-05-10 16:10:25.856 | INFO     | __main__:start:149 - Running initial jobs...
+2025-05-10 16:10:25.856 | INFO     | __main__:run_collector_job:48 - 2025-05-10 16:10:25 - [COLLECTOR] - INFO - Running at 2025-05-10T16:10:25.856835
+2025-05-10 16:10:25.856 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for London
+2025-05-10 16:10:27.012 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for London to C:\Users\arnol\Desktop\ClimateCore\data\raw\london_20250510_161025.json
+2025-05-10 16:10:27.016 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for New York
+2025-05-10 16:10:28.027 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for New York to C:\Users\arnol\Desktop\ClimateCore\data\raw\new_york_20250510_161025.json
+2025-05-10 16:10:28.027 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Tokyo
+2025-05-10 16:10:29.047 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Tokyo to C:\Users\arnol\Desktop\ClimateCore\data\raw\tokyo_20250510_161025.json
+2025-05-10 16:10:29.051 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Sydney
+2025-05-10 16:10:30.056 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Sydney to C:\Users\arnol\Desktop\ClimateCore\data\raw\sydney_20250510_161025.json
+2025-05-10 16:10:30.061 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Rio de Janeiro
+2025-05-10 16:10:31.046 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Rio de Janeiro to C:\Users\arnol\Desktop\ClimateCore\data\raw\rio_de_janeiro_20250510_161025.json
+2025-05-10 16:10:31.056 | INFO     | src.collectors.weather_collector:collect_and_save:70 - Saved combined data to C:\Users\arnol\Desktop\ClimateCore\data\raw\weather_data_20250510_161025.json
+2025-05-10 16:10:31.056 | INFO     | __main__:run_collector_job:55 - 2025-05-10 16:10:31 - [COLLECTOR] - SUCCESS - Completed successfully
+2025-05-10 16:10:31.062 | INFO     | __main__:run_processor_job:69 - 2025-05-10 16:10:31 - [PROCESSOR] - INFO - Running at 2025-05-10T16:10:31.061220
+2025-05-10 16:10:31.083 | INFO     | src.processors.weather_processor:process_recent_data:80 - Found 30 recent files to process
+2025-05-10 16:10:31.206 | INFO     | src.processors.weather_processor:process_recent_data:102 - Saved processed data to C:\Users\arnol\Desktop\ClimateCore\data\processed\processed_weather_20250510_161031.csv
+2025-05-10 16:10:31.306 | INFO     | src.database.operations:create_data_version:50 - Created new data version: 40c1d9ad-b633-4c2f-b055-17afd99cf721 - weather_data_20250510_161031
+2025-05-10 16:10:31.316 | INFO     | src.versioning.data_versioner:create_version:94 - Created new data version: 3de2fd8c-fcba-4fc7-8af4-ec1bd92def05 - weather_data_20250510_161031
+2025-05-10 16:10:31.384 | INFO     | src.database.operations:create_data_version:50 - Created new data version: b19ccd09-3fd1-4a44-b92f-f6da3e722fde - weather_data_20250510_161031
+2025-05-10 16:10:31.386 | ERROR    | src.versioning.data_versioner:add_data_to_version:118 - Version not found: 40c1d9ad-b633-4c2f-b055-17afd99cf721
+2025-05-10 16:10:31.387 | INFO     | src.processors.weather_processor:_store_in_database:148 - Created new data version: 40c1d9ad-b633-4c2f-b055-17afd99cf721
+2025-05-10 16:10:31.404 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:31.410 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:31.419 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:10:31.425 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:10:31.436 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:31.446 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:31.456 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:10:31.463 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:10:31.477 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:31.484 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:31.486 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:10:31.496 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:10:31.511 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:31.516 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:31.522 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:10:31.531 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:10:31.546 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:31.554 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:31.561 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:10:31.566 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:10:31.577 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:31.591 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:31.596 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:31.601 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:31.611 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:31.618 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:31.618 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:31.631 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:31.636 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:31.641 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:31.650 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:10:31.656 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:10:31.666 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:10:31.671 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:10:31.677 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:10:31.686 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:10:31.691 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:10:31.697 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:10:31.706 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:10:31.716 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:10:31.806 | INFO     | src.database.operations:store_weather_data:118 - Inserted 10 weather records
+2025-05-10 16:10:31.806 | INFO     | src.processors.weather_processor:_store_in_database:157 - Stored 10 weather records in database with version 40c1d9ad-b633-4c2f-b055-17afd99cf721
+2025-05-10 16:10:31.866 | INFO     | src.processors.weather_processor:generate_daily_stats:209 - Saved daily analytics to C:\Users\arnol\Desktop\ClimateCore\data\analytics\daily_weather_stats_20250510.csv
+2025-05-10 16:10:31.964 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:31.966 | INFO     | src.processors.weather_processor:generate_daily_stats:223 - Stored daily stats in database with version b19ccd09-3fd1-4a44-b92f-f6da3e722fde
+2025-05-10 16:10:31.970 | ERROR    | src.versioning.data_versioner:add_data_to_version:118 - Version not found: b19ccd09-3fd1-4a44-b92f-f6da3e722fde
+2025-05-10 16:10:32.001 | INFO     | src.processors.data_analyzer:analyze_temperature_trends:95 - Saved temperature trend analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\temperature_trends_20250510.csv
+2025-05-10 16:10:32.036 | INFO     | src.processors.data_analyzer:analyze_weather_patterns:129 - Saved weather pattern analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\weather_patterns_20250510.csv
+2025-05-10 16:10:32.041 | INFO     | src.processors.weather_processor:run_analysis:246 - Completed weather data analysis
+2025-05-10 16:10:32.041 | INFO     | __main__:run_processor_job:76 - 2025-05-10 16:10:32 - [PROCESSOR] - SUCCESS - Completed successfully
+2025-05-10 16:10:32.041 | INFO     | __main__:run_storage_job:90 - 2025-05-10 16:10:32 - [STORAGE] - INFO - Running at 2025-05-10T16:10:32.041508
+2025-05-10 16:10:32.046 | INFO     | src.storage_scheduler:store_data:57 - Starting storage job...
+2025-05-10 16:10:32.066 | INFO     | src.database.operations:create_data_version:50 - Created new data version: ca5c07a0-6787-4d0f-9cc9-c1967027e27b - auto_20250510_1610
+2025-05-10 16:10:32.096 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.101 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.111 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.118 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.126 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.131 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.136 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.141 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.151 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.156 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.158 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:32.159 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_150547.csv
+2025-05-10 16:10:32.237 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:32.267 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.273 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.278 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.286 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.286 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.296 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.304 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.309 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.314 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.320 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.321 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:32.322 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_150657.csv
+2025-05-10 16:10:32.369 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:32.393 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.400 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:32.406 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.411 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:32.417 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.422 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:32.427 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.432 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:32.438 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.443 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:32.448 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.450 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.456 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.456 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.466 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.471 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:32.478 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:32.482 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:32.486 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:32.486 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:32.496 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:32.496 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_150806.csv
+2025-05-10 16:10:32.563 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:32.591 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.596 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:32.606 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.613 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:32.618 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.626 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:32.636 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.641 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:32.649 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.656 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:32.663 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.670 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.676 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.683 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.687 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.697 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:32.749 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:32.765 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:32.772 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:32.786 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:32.788 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:32.790 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_152843.csv
+2025-05-10 16:10:32.890 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:32.931 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:32.936 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:32.941 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:32.946 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:32.956 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:32.960 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:32.965 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:32.971 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:32.976 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:32.990 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:32.996 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.001 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.006 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.006 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.017 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.019 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:33.026 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:33.026 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:33.037 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:33.037 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:33.037 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:33.037 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_153720.csv
+2025-05-10 16:10:33.096 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:33.118 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.124 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:33.129 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.134 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:33.140 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.146 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:33.156 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.156 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:33.167 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.172 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:33.178 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.183 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.188 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.193 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.198 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.201 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:33.206 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:33.206 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:33.216 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:33.216 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:33.216 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:33.216 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_153925.csv
+2025-05-10 16:10:33.268 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:33.301 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.306 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:33.306 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:10:33.318 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.326 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:33.326 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:10:33.336 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.336 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:33.346 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:10:33.354 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.359 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:33.364 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:10:33.369 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.374 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:33.379 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:10:33.384 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.386 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.386 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.397 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.397 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.406 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:33.406 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:33.416 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:33.416 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:33.426 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:33.426 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:10:33.436 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:10:33.436 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:10:33.446 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:10:33.446 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:10:33.446 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:33.456 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_160134.csv
+2025-05-10 16:10:33.520 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:33.543 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.550 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:33.556 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:10:33.556 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:10:33.567 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.572 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:33.577 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:10:33.583 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:10:33.589 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.593 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:33.598 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:10:33.601 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:10:33.606 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.606 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:33.616 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:10:33.616 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:10:33.626 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.626 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:33.636 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:10:33.636 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:10:33.646 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.646 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.656 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.656 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.666 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.666 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:33.677 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:33.684 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:33.686 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:33.686 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:33.696 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:10:33.696 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:10:33.706 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:10:33.706 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:10:33.717 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:10:33.717 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:10:33.726 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:10:33.726 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:10:33.736 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:10:33.736 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:10:33.736 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:33.736 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_160535.csv
+2025-05-10 16:10:33.813 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:33.839 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.839 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:33.850 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:10:33.857 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:10:33.857 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:10:33.869 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.876 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:33.879 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:10:33.889 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:10:33.895 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:10:33.900 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.904 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:33.910 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:10:33.915 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:10:33.917 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:10:33.926 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.926 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:33.936 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:10:33.936 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:10:33.946 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:10:33.946 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.956 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:33.956 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:10:33.966 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:10:33.972 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:10:33.976 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:10:33.980 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:10:33.988 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:10:33.988 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:10:33.996 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:10:33.996 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:10:34.007 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:10:34.016 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:10:34.021 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:10:34.026 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:10:34.032 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:10:34.036 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:10:34.036 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:10:34.049 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:10:34.056 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:10:34.066 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:10:34.066 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:10:34.080 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:10:34.088 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:10:34.094 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:10:34.098 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:10:34.106 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:10:34.106 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:10:34.116 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:10:34.116 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:10:34.128 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:10:34.129 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_161031.csv
+2025-05-10 16:10:34.207 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:10:34.207 | INFO     | src.storage_scheduler:store_data:95 - Storage job complete. Total records: 0
+2025-05-10 16:10:34.207 | INFO     | __main__:run_storage_job:97 - 2025-05-10 16:10:34 - [STORAGE] - SUCCESS - Completed successfully
+2025-05-10 16:10:34.211 | INFO     | __main__:start:169 - All schedulers started successfully with the following intervals:
+  Collector: Every 30 seconds
+  Processor: Every 30 seconds
+  Storage: Every 30 seconds
+  Status updates: Every 15 seconds
+2025-05-10 16:10:49.327 | INFO     | __main__:print_status:113 - 
+================================================================================
+WEATHER SYSTEM STATUS - 2025-05-10 16:10:49
+================================================================================
+2025-05-10 16:10:49.356 | INFO     | __main__:print_status:135 - COLLECTOR  - Last run: 2025-05-10 16:10:31  - Status: Success
+2025-05-10 16:10:49.362 | INFO     | __main__:print_status:135 - PROCESSOR  - Last run: 2025-05-10 16:10:32  - Status: Success
+2025-05-10 16:10:49.363 | INFO     | __main__:print_status:135 - STORAGE    - Last run: 2025-05-10 16:10:34  - Status: Success
+2025-05-10 16:10:49.369 | INFO     | __main__:print_status:138 - ================================================================================
+2025-05-10 16:11:04.473 | INFO     | __main__:run_collector_job:48 - 2025-05-10 16:11:04 - [COLLECTOR] - INFO - Running at 2025-05-10T16:11:04.473636
+2025-05-10 16:11:04.476 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for London
+2025-05-10 16:11:05.557 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for London to C:\Users\arnol\Desktop\ClimateCore\data\raw\london_20250510_161104.json
+2025-05-10 16:11:05.557 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for New York
+2025-05-10 16:11:06.531 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for New York to C:\Users\arnol\Desktop\ClimateCore\data\raw\new_york_20250510_161104.json
+2025-05-10 16:11:06.531 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Tokyo
+2025-05-10 16:11:07.577 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Tokyo to C:\Users\arnol\Desktop\ClimateCore\data\raw\tokyo_20250510_161104.json
+2025-05-10 16:11:07.577 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Sydney
+2025-05-10 16:11:08.596 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Sydney to C:\Users\arnol\Desktop\ClimateCore\data\raw\sydney_20250510_161104.json
+2025-05-10 16:11:08.596 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Rio de Janeiro
+2025-05-10 16:11:09.576 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Rio de Janeiro to C:\Users\arnol\Desktop\ClimateCore\data\raw\rio_de_janeiro_20250510_161104.json
+2025-05-10 16:11:09.580 | INFO     | src.collectors.weather_collector:collect_and_save:70 - Saved combined data to C:\Users\arnol\Desktop\ClimateCore\data\raw\weather_data_20250510_161104.json
+2025-05-10 16:11:09.580 | INFO     | __main__:run_collector_job:55 - 2025-05-10 16:11:09 - [COLLECTOR] - SUCCESS - Completed successfully
+2025-05-10 16:11:09.588 | INFO     | __main__:run_processor_job:69 - 2025-05-10 16:11:09 - [PROCESSOR] - INFO - Running at 2025-05-10T16:11:09.588968
+2025-05-10 16:11:09.600 | INFO     | src.processors.weather_processor:process_recent_data:80 - Found 36 recent files to process
+2025-05-10 16:11:09.646 | INFO     | src.processors.weather_processor:process_recent_data:102 - Saved processed data to C:\Users\arnol\Desktop\ClimateCore\data\processed\processed_weather_20250510_161109.csv
+2025-05-10 16:11:09.675 | INFO     | src.database.operations:create_data_version:50 - Created new data version: ce755479-a140-474c-80a0-6a4c4196c306 - weather_data_20250510_161109
+2025-05-10 16:11:09.676 | INFO     | src.versioning.data_versioner:create_version:94 - Created new data version: 40fe7e9d-522d-4ce0-a63a-75eeff4c8d56 - weather_data_20250510_161109
+2025-05-10 16:11:09.700 | INFO     | src.database.operations:create_data_version:50 - Created new data version: e8cf2eb0-f023-4986-bae5-e77478b94d56 - weather_data_20250510_161109
+2025-05-10 16:11:09.704 | ERROR    | src.versioning.data_versioner:add_data_to_version:118 - Version not found: ce755479-a140-474c-80a0-6a4c4196c306
+2025-05-10 16:11:09.705 | INFO     | src.processors.weather_processor:_store_in_database:148 - Created new data version: ce755479-a140-474c-80a0-6a4c4196c306
+2025-05-10 16:11:09.719 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:11:09.726 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:11:09.735 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:11:09.737 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:11:09.751 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:09.760 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:09.766 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:11:09.773 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:11:09.779 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:11:09.785 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:11:09.791 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:09.797 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:09.798 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:11:09.806 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:11:09.812 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:11:09.816 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:11:09.826 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:09.832 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:09.836 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:11:09.841 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:11:09.848 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:11:09.848 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:11:09.856 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:09.860 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:09.866 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:11:09.866 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:11:09.876 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:11:09.880 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:11:09.886 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:09.886 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:09.896 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:11:09.896 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:11:09.906 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:11:09.906 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:11:09.916 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:11:09.916 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:11:09.926 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:11:09.926 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:11:09.937 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:11:09.937 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:11:09.946 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:11:09.946 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:11:09.956 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:11:09.961 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:11:09.968 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:11:09.972 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:11:09.976 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:11:09.976 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:11:09.988 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:11:09.988 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:11:09.996 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:10.003 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:10.006 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:10.006 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:10.016 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:10.019 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:10.026 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:10.026 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:10.036 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:10.036 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:10.036 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:11:10.036 | INFO     | src.processors.weather_processor:_store_in_database:157 - Stored 0 weather records in database with version ce755479-a140-474c-80a0-6a4c4196c306
+2025-05-10 16:11:10.058 | INFO     | src.processors.weather_processor:generate_daily_stats:209 - Saved daily analytics to C:\Users\arnol\Desktop\ClimateCore\data\analytics\daily_weather_stats_20250510.csv
+2025-05-10 16:11:10.124 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:11:10.125 | INFO     | src.processors.weather_processor:generate_daily_stats:223 - Stored daily stats in database with version e8cf2eb0-f023-4986-bae5-e77478b94d56
+2025-05-10 16:11:10.126 | ERROR    | src.versioning.data_versioner:add_data_to_version:118 - Version not found: e8cf2eb0-f023-4986-bae5-e77478b94d56
+2025-05-10 16:11:10.143 | INFO     | src.processors.data_analyzer:analyze_temperature_trends:95 - Saved temperature trend analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\temperature_trends_20250510.csv
+2025-05-10 16:11:10.164 | INFO     | src.processors.data_analyzer:analyze_weather_patterns:129 - Saved weather pattern analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\weather_patterns_20250510.csv
+2025-05-10 16:11:10.170 | INFO     | src.processors.weather_processor:run_analysis:246 - Completed weather data analysis
+2025-05-10 16:11:10.171 | INFO     | __main__:run_processor_job:76 - 2025-05-10 16:11:10 - [PROCESSOR] - SUCCESS - Completed successfully
+2025-05-10 16:11:10.173 | INFO     | __main__:run_storage_job:90 - 2025-05-10 16:11:10 - [STORAGE] - INFO - Running at 2025-05-10T16:11:10.173876
+2025-05-10 16:11:10.177 | INFO     | src.storage_scheduler:store_data:57 - Starting storage job...
+2025-05-10 16:11:10.199 | INFO     | src.database.operations:create_data_version:50 - Created new data version: 7d631f6e-1b72-4c02-89aa-d54597d1307d - auto_20250510_1611
+2025-05-10 16:11:10.227 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:11:10.236 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:11:10.241 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:11:10.246 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:11:10.252 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:10.257 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:10.262 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:11:10.268 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:11:10.273 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:11:10.278 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:11:10.283 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:10.286 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:10.291 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:11:10.296 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:11:10.299 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:11:10.306 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:11:10.311 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:10.321 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:10.326 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:11:10.331 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:11:10.336 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:11:10.341 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:11:10.347 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:10.351 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:10.356 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:11:10.366 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:11:10.371 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:11:10.379 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:11:10.379 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:10.389 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:10.396 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:11:10.396 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:11:10.406 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:11:10.411 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:11:10.416 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:11:10.426 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:11:10.427 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:11:10.436 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:11:10.436 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:11:10.446 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:11:10.456 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:11:10.462 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:11:10.467 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:11:10.470 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:11:10.476 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:11:10.476 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:11:10.486 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:11:10.496 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:11:10.496 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:11:10.506 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:11:10.516 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:10.516 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:10.526 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:10.526 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:10.536 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:10.536 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:10.546 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:10.546 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:10.556 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:10.562 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:10.566 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:11:10.566 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_161109.csv
+2025-05-10 16:11:10.631 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:11:10.632 | INFO     | src.storage_scheduler:store_data:95 - Storage job complete. Total records: 0
+2025-05-10 16:11:10.633 | INFO     | __main__:run_storage_job:97 - 2025-05-10 16:11:10 - [STORAGE] - SUCCESS - Completed successfully
+2025-05-10 16:11:10.634 | INFO     | __main__:print_status:113 - 
+================================================================================
+WEATHER SYSTEM STATUS - 2025-05-10 16:11:10
+================================================================================
+2025-05-10 16:11:10.636 | INFO     | __main__:print_status:135 - COLLECTOR  - Last run: 2025-05-10 16:11:09  - Status: Success
+2025-05-10 16:11:10.637 | INFO     | __main__:print_status:135 - PROCESSOR  - Last run: 2025-05-10 16:11:10  - Status: Success
+2025-05-10 16:11:10.638 | INFO     | __main__:print_status:135 - STORAGE    - Last run: 2025-05-10 16:11:10  - Status: Success
+2025-05-10 16:11:10.639 | INFO     | __main__:print_status:138 - ================================================================================
+2025-05-10 16:11:25.737 | INFO     | __main__:print_status:113 - 
+================================================================================
+WEATHER SYSTEM STATUS - 2025-05-10 16:11:25
+================================================================================
+2025-05-10 16:11:25.746 | INFO     | __main__:print_status:135 - COLLECTOR  - Last run: 2025-05-10 16:11:09  - Status: Success
+2025-05-10 16:11:25.762 | INFO     | __main__:print_status:135 - PROCESSOR  - Last run: 2025-05-10 16:11:10  - Status: Success
+2025-05-10 16:11:25.772 | INFO     | __main__:print_status:135 - STORAGE    - Last run: 2025-05-10 16:11:10  - Status: Success
+2025-05-10 16:11:25.779 | INFO     | __main__:print_status:138 - ================================================================================
+2025-05-10 16:11:39.930 | INFO     | __main__:run_collector_job:48 - 2025-05-10 16:11:39 - [COLLECTOR] - INFO - Running at 2025-05-10T16:11:39.930251
+2025-05-10 16:11:39.937 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for London
+2025-05-10 16:11:40.986 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for London to C:\Users\arnol\Desktop\ClimateCore\data\raw\london_20250510_161139.json
+2025-05-10 16:11:40.986 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for New York
+2025-05-10 16:11:42.038 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for New York to C:\Users\arnol\Desktop\ClimateCore\data\raw\new_york_20250510_161139.json
+2025-05-10 16:11:42.038 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Tokyo
+2025-05-10 16:11:43.027 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Tokyo to C:\Users\arnol\Desktop\ClimateCore\data\raw\tokyo_20250510_161139.json
+2025-05-10 16:11:43.027 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Sydney
+2025-05-10 16:11:44.012 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Sydney to C:\Users\arnol\Desktop\ClimateCore\data\raw\sydney_20250510_161139.json
+2025-05-10 16:11:44.012 | INFO     | src.collectors.weather_collector:collect_and_save:46 - Collecting weather data for Rio de Janeiro
+2025-05-10 16:11:45.046 | INFO     | src.collectors.weather_collector:collect_and_save:61 - Saved data for Rio de Janeiro to C:\Users\arnol\Desktop\ClimateCore\data\raw\rio_de_janeiro_20250510_161139.json
+2025-05-10 16:11:45.054 | INFO     | src.collectors.weather_collector:collect_and_save:70 - Saved combined data to C:\Users\arnol\Desktop\ClimateCore\data\raw\weather_data_20250510_161139.json
+2025-05-10 16:11:45.055 | INFO     | __main__:run_collector_job:55 - 2025-05-10 16:11:45 - [COLLECTOR] - SUCCESS - Completed successfully
+2025-05-10 16:11:46.068 | INFO     | __main__:run_processor_job:69 - 2025-05-10 16:11:46 - [PROCESSOR] - INFO - Running at 2025-05-10T16:11:46.068901
+2025-05-10 16:11:46.076 | INFO     | src.processors.weather_processor:process_recent_data:80 - Found 42 recent files to process
+2025-05-10 16:11:46.148 | INFO     | src.processors.weather_processor:process_recent_data:102 - Saved processed data to C:\Users\arnol\Desktop\ClimateCore\data\processed\processed_weather_20250510_161146.csv
+2025-05-10 16:11:46.173 | INFO     | src.database.operations:create_data_version:50 - Created new data version: 5aaa344b-d890-4720-b853-30bc50eef3e9 - weather_data_20250510_161146
+2025-05-10 16:11:46.183 | INFO     | src.versioning.data_versioner:create_version:94 - Created new data version: 5e0019a0-f506-4199-93ef-7f160ef8c907 - weather_data_20250510_161146
+2025-05-10 16:11:46.205 | INFO     | src.database.operations:create_data_version:50 - Created new data version: 78458f8b-6f87-45e7-875d-3972dc2c095f - weather_data_20250510_161146
+2025-05-10 16:11:46.208 | ERROR    | src.versioning.data_versioner:add_data_to_version:118 - Version not found: 5aaa344b-d890-4720-b853-30bc50eef3e9
+2025-05-10 16:11:46.208 | INFO     | src.processors.weather_processor:_store_in_database:148 - Created new data version: 5aaa344b-d890-4720-b853-30bc50eef3e9
+2025-05-10 16:11:46.218 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:11:46.227 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:11:46.234 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:11:46.236 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:11:46.241 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.249 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.256 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.261 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:11:46.268 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:11:46.273 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:11:46.278 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:11:46.284 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.289 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.294 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.297 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:11:46.297 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:11:46.306 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:11:46.313 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:11:46.316 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.321 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.326 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.329 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:11:46.336 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:11:46.341 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:11:46.347 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:11:46.348 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.356 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.361 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.366 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:11:46.366 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:11:46.376 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:11:46.376 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:11:46.386 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.386 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.396 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.396 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:11:46.406 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:11:46.406 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:11:46.416 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:11:46.416 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:11:46.426 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:11:46.426 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:11:46.436 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:11:46.436 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:11:46.448 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:11:46.456 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:11:46.456 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:11:46.468 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:11:46.468 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:11:46.476 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:11:46.476 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:11:46.486 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:11:46.486 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:11:46.496 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:11:46.496 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:11:46.506 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.516 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.516 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.527 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.527 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.536 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.536 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.548 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.548 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.556 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.556 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.566 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.576 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.576 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.586 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.586 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:11:46.586 | INFO     | src.processors.weather_processor:_store_in_database:157 - Stored 0 weather records in database with version 5aaa344b-d890-4720-b853-30bc50eef3e9
+2025-05-10 16:11:46.608 | INFO     | src.processors.weather_processor:generate_daily_stats:209 - Saved daily analytics to C:\Users\arnol\Desktop\ClimateCore\data\analytics\daily_weather_stats_20250510.csv
+2025-05-10 16:11:46.666 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:11:46.671 | INFO     | src.processors.weather_processor:generate_daily_stats:223 - Stored daily stats in database with version 78458f8b-6f87-45e7-875d-3972dc2c095f
+2025-05-10 16:11:46.671 | ERROR    | src.versioning.data_versioner:add_data_to_version:118 - Version not found: 78458f8b-6f87-45e7-875d-3972dc2c095f
+2025-05-10 16:11:46.691 | INFO     | src.processors.data_analyzer:analyze_temperature_trends:95 - Saved temperature trend analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\temperature_trends_20250510.csv
+2025-05-10 16:11:46.726 | INFO     | src.processors.data_analyzer:analyze_weather_patterns:129 - Saved weather pattern analysis to C:\Users\arnol\Desktop\ClimateCore\data\analytics\weather_patterns_20250510.csv
+2025-05-10 16:11:46.733 | INFO     | src.processors.weather_processor:run_analysis:246 - Completed weather data analysis
+2025-05-10 16:11:46.736 | INFO     | __main__:run_processor_job:76 - 2025-05-10 16:11:46 - [PROCESSOR] - SUCCESS - Completed successfully
+2025-05-10 16:11:46.739 | INFO     | __main__:run_storage_job:90 - 2025-05-10 16:11:46 - [STORAGE] - INFO - Running at 2025-05-10T16:11:46.738439
+2025-05-10 16:11:46.740 | INFO     | src.storage_scheduler:store_data:57 - Starting storage job...
+2025-05-10 16:11:46.759 | INFO     | src.database.operations:create_data_version:50 - Created new data version: cb4bd87c-3fd2-4754-8193-4ff03f0f7768 - auto_20250510_1611
+2025-05-10 16:11:46.791 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:11:46.798 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:11:46.806 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:11:46.814 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:11:46.821 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.826 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.832 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:46.837 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:11:46.843 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:11:46.849 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:11:46.854 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:11:46.860 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.866 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.871 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:46.878 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:11:46.878 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:11:46.886 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:11:46.896 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:11:46.901 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.907 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.909 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:46.916 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:11:46.918 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:11:46.926 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:11:46.926 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:11:46.937 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.937 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.946 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:46.949 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:11:46.956 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:11:46.956 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:11:46.956 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:11:46.968 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.968 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.976 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:46.976 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 14:54:27 already exists
+2025-05-10 16:11:46.986 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 14:53:50 already exists
+2025-05-10 16:11:46.986 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 14:52:58 already exists
+2025-05-10 16:11:46.996 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 14:54:33 already exists
+2025-05-10 16:11:46.996 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 14:57:00 already exists
+2025-05-10 16:11:47.006 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:05:04 already exists
+2025-05-10 16:11:47.006 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:04:37 already exists
+2025-05-10 16:11:47.016 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 15:05:30 already exists
+2025-05-10 16:11:47.026 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:07:11 already exists
+2025-05-10 16:11:47.026 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 15:05:22 already exists
+2025-05-10 16:11:47.036 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:50:10 already exists
+2025-05-10 16:11:47.036 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:56:33 already exists
+2025-05-10 16:11:47.046 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:03 already exists
+2025-05-10 16:11:47.049 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 15:58:07 already exists
+2025-05-10 16:11:47.056 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:01:34 already exists
+2025-05-10 16:11:47.056 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 15:53:51 already exists
+2025-05-10 16:11:47.066 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 16:04:43 already exists
+2025-05-10 16:11:47.066 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:01:30 already exists
+2025-05-10 16:11:47.076 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:04:52 already exists
+2025-05-10 16:11:47.076 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:05:12 already exists
+2025-05-10 16:11:47.086 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:47.086 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:47.096 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:47.096 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:47.106 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:47.106 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:47.116 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:47.116 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:47.126 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:47.126 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:47.136 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for London at 2025-05-10 16:05:02 already exists
+2025-05-10 16:11:47.136 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for New York at 2025-05-10 15:59:25 already exists
+2025-05-10 16:11:47.149 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Tokyo at 2025-05-10 16:07:17 already exists
+2025-05-10 16:11:47.156 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Sydney at 2025-05-10 16:10:30 already exists
+2025-05-10 16:11:47.156 | DEBUG    | src.database.operations:store_weather_data:79 - Weather data for Rio de Janeiro at 2025-05-10 16:10:31 already exists
+2025-05-10 16:11:47.164 | INFO     | src.database.operations:store_weather_data:118 - Inserted 0 weather records
+2025-05-10 16:11:47.165 | INFO     | src.storage_scheduler:store_data:84 - Stored 0 records from processed_weather_20250510_161146.csv
+2025-05-10 16:11:47.219 | INFO     | src.database.operations:store_daily_stats:192 - Inserted/updated 0 daily stats records
+2025-05-10 16:11:47.219 | INFO     | src.storage_scheduler:store_data:95 - Storage job complete. Total records: 0
+2025-05-10 16:11:47.219 | INFO     | __main__:run_storage_job:97 - 2025-05-10 16:11:47 - [STORAGE] - SUCCESS - Completed successfully
+2025-05-10 16:11:47.226 | INFO     | __main__:print_status:113 - 
+================================================================================
+WEATHER SYSTEM STATUS - 2025-05-10 16:11:47
+================================================================================
+2025-05-10 16:11:47.226 | INFO     | __main__:print_status:135 - COLLECTOR  - Last run: 2025-05-10 16:11:45  - Status: Success
+2025-05-10 16:11:47.230 | INFO     | __main__:print_status:135 - PROCESSOR  - Last run: 2025-05-10 16:11:46  - Status: Success
+2025-05-10 16:11:47.231 | INFO     | __main__:print_status:135 - STORAGE    - Last run: 2025-05-10 16:11:47  - Status: Success
+2025-05-10 16:11:47.233 | INFO     | __main__:print_status:138 - ================================================================================

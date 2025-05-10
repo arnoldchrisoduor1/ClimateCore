@@ -4,12 +4,15 @@ import glob
 import pandas as pd
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import List, Dict, Any, Union
-from .data_analyzer import WeatherAnalyzer
+from typing import List, Dict, Any, Union, Optional
 
-from ..config import RAW_DATA_DIR
+from ..config import RAW_DATA_DIR, ENABLE_VERSIONING
 from ..utils.logger import logger
 from .data_cleaner import DataCleaner
+from .data_analyzer import WeatherAnalyzer
+from ..database.connection import get_db_session
+from ..database.operations import DatabaseOperations
+from ..versioning.data_versioner import DataVersioner
 
 class WeatherProcessor:
     def __init__(self):
@@ -22,6 +25,9 @@ class WeatherProcessor:
         Path(self.analytics_data_dir).mkdir(parents=True, exist_ok=True)
         
         self.cleaner = DataCleaner()
+        
+        # Initialize versioner if enabled
+        self.versioner = DataVersioner() if ENABLE_VERSIONING else None
     
     def get_latest_raw_files(self, hours_back: int = 24) -> List[str]:
         """Get a list of raw data files from the last N hours"""
@@ -86,7 +92,7 @@ class WeatherProcessor:
             # Handle missing values
             df = self.cleaner.handle_missing_values(df)
             
-            # Save processed data
+            # Save processed data to file system
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             processed_filepath = os.path.join(
                 self.processed_data_dir, 
@@ -95,19 +101,76 @@ class WeatherProcessor:
             df.to_csv(processed_filepath, index=False)
             logger.info(f"Saved processed data to {processed_filepath}")
             
+            # Store the data in the database with versioning
+            self._store_in_database(df)
+            
             return df
         else:
             logger.warning("No data was processed")
             return pd.DataFrame()
     
-    def generate_daily_stats(self, df: pd.DataFrame = None) -> None:
+    def _store_in_database(self, df: pd.DataFrame) -> str:
+        """Store processed data in database with versioning"""
+        if df.empty:
+            logger.warning("No data to store in database")
+            return None
+            
+        # Create a new version for this data
+        version_id = None
+        version_name = f"weather_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        
+        with get_db_session() as session:
+            try:
+                # Create a new version if versioning is enabled
+                if ENABLE_VERSIONING:
+                    latest_version = DatabaseOperations.get_latest_version(session)
+                    parent_id = latest_version.id if latest_version else None
+                    
+                    # Create version in database
+                    version = DatabaseOperations.create_data_version(
+                        session,
+                        version_name,
+                        f"Weather data collected at {datetime.now().isoformat()}",
+                        parent_id
+                    )
+                    version_id = version.id
+                    
+                    # Create version in file system
+                    self.versioner.create_version(
+                        version_name,
+                        f"Weather data collected at {datetime.now().isoformat()}",
+                        parent_id
+                    )
+                    
+                    # Add data to version
+                    self.versioner.add_data_to_version(version_id, df, "processed_weather")
+                    
+                    logger.info(f"Created new data version: {version_id}")
+                else:
+                    # If versioning is disabled, use a default version ID
+                    version_id = "current"
+                
+                # Store the data in the database
+                data_for_storage = df.to_dict('records')
+                stored_count = DatabaseOperations.store_weather_data(session, data_for_storage, version_id)
+                
+                logger.info(f"Stored {stored_count} weather records in database with version {version_id}")
+                
+                return version_id
+                
+            except Exception as e:
+                logger.error(f"Error storing data in database: {e}")
+                session.rollback()
+                return None
+    
+    def generate_daily_stats(self, df: pd.DataFrame = None) -> Optional[pd.DataFrame]:
         """Generate daily statistics from processed data"""
         if df is None or df.empty:
             # Load recent processed files
             processed_files = glob.glob(os.path.join(self.processed_data_dir, "*.csv"))
             if not processed_files:
                 logger.warning("No processed files available for analytics")
-                return
+                return None
                 
             df = pd.concat([pd.read_csv(f) for f in processed_files])
         
@@ -136,7 +199,7 @@ class WeatherProcessor:
         # Calculate temperature variation
         daily_stats['temperature_variation'] = daily_stats['temperature_max'] - daily_stats['temperature_min']
         
-        # Save analytics
+        # Save analytics to file system
         timestamp = datetime.now().strftime("%Y%m%d")
         analytics_filepath = os.path.join(
             self.analytics_data_dir, 
@@ -144,6 +207,28 @@ class WeatherProcessor:
         )
         daily_stats.to_csv(analytics_filepath, index=False)
         logger.info(f"Saved daily analytics to {analytics_filepath}")
+        
+        # Store the daily stats in the database with versioning
+        with get_db_session() as session:
+            try:
+                # Get the latest version ID
+                if ENABLE_VERSIONING:
+                    latest_version = DatabaseOperations.get_latest_version(session)
+                    version_id = latest_version.id if latest_version else "current"
+                else:
+                    version_id = "current"
+                
+                # Store the stats in the database
+                DatabaseOperations.store_daily_stats(session, daily_stats, version_id)
+                logger.info(f"Stored daily stats in database with version {version_id}")
+                
+                # If versioning is enabled, also add the stats to the version file
+                if ENABLE_VERSIONING and self.versioner:
+                    self.versioner.add_data_to_version(version_id, daily_stats, "daily_stats")
+                
+            except Exception as e:
+                logger.error(f"Error storing daily stats in database: {e}")
+                session.rollback()
         
         return daily_stats
     

@@ -2,8 +2,8 @@ import time
 import schedule
 from datetime import datetime
 
-from processors.weather_processor import run_processor
-from utils.logger import logger
+from src.processors.weather_processor import run_processor
+from src.utils.logger import logger
 
 def job():
     logger.info(f"Running scheduled data processing at {datetime.now().isoformat()}")

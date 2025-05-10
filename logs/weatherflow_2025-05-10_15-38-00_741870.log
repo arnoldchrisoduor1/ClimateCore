@@ -1,0 +1,9 @@
+2025-05-10 15:38:00.838 | INFO     | __main__:store_data:57 - Starting storage job...
+2025-05-10 15:38:00.927 | ERROR    | __main__:store_data:99 - Storage job failed: (psycopg2.errors.UndefinedTable) relation "data_versions" does not exist
+LINE 1: INSERT INTO data_versions (id, version_name, description, pa...
+                    ^
+
+[SQL: INSERT INTO data_versions (id, version_name, description, parent_version_id, created_at, created_by, is_active, metadata_json) VALUES (%(id)s, %(version_name)s, %(description)s, %(parent_version_id)s, %(created_at)s, %(created_by)s, %(is_active)s, %(metadata_json)s)]
+[parameters: {'id': '1fc818f3-1cc9-4f65-bfc9-ca1f382d27cb', 'version_name': 'auto_20250510_1538', 'description': 'Automatically created version', 'parent_version_id': None, 'created_at': datetime.datetime(2025, 5, 10, 12, 38, 0, 841654), 'created_by': 'system', 'is_active': 1, 'metadata_json': None}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-05-10 15:38:00.927 | INFO     | __main__:main:132 - Storage scheduler started. Runs hourly...
