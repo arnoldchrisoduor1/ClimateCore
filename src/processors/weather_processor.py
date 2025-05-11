@@ -85,7 +85,7 @@ class WeatherProcessor:
             processed_data = self.process_raw_file(file_path)
             all_processed_data.extend(processed_data)
         
-        # Convert to DataFrame
+        # Convert the data to dataframe
         if all_processed_data:
             df = pd.DataFrame(all_processed_data)
             
